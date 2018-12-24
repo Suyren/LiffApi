@@ -50,23 +50,23 @@ function initializeApp(data) {
               "defaultAction": {
                   "type": "uri",
                   "label": "View detail",
-                  "uri": "http://example.com/page/123"
+                  "uri": "https://www.google.com/"
               },
               "actions": [
                   {
                     "type": "postback",
                     "label": "Buy",
-                    "data": "action=buy&itemid=123"
+                    "displayText": "BuyText"
                   },
                   {
                     "type": "postback",
                     "label": "Add to cart",
-                    "data": "action=add&itemid=123"
+                    "displayText": "Add to cart Text"
                   },
                   {
                     "type": "uri",
                     "label": "View detail",
-                    "uri": "http://example.com/page/123"
+                    "uri": "https://tw.yahoo.com/"
                   }
               ]
           }
