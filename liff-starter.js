@@ -33,24 +33,20 @@ function initializeApp(data) {
             type: 'text',
             text: "You've successfully sent a message! Hooray!"
         }, {
-            type: 'sticker',
-            packageId: '2',
-            stickerId: '144'
-        }, {
-          "type": "template",
-          "template": {
-              "type": "confirm",
-              "text": "Are you sure?",
-              "actions": [
+          type: "template",
+          template: {
+              type: "confirm",
+              text: "Are you sure?",
+              actions: [
                   {
-                    "type": "message",
-                    "label": "Yes",
-                    "text": "yes"
+                    type: "message",
+                    label: "Yes",
+                    text: "yes"
                   },
                   {
-                    "type": "message",
-                    "label": "No",
-                    "text": "no"
+                    type: "message",
+                    label: "No",
+                    text: "no"
                   }
               ]
           }
