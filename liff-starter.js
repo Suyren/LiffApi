@@ -1,6 +1,6 @@
 window.onload = function (e) {
     liff.init(function (data) {
-        // initializeApp(data);
+        initializeApp(data);
         const userId = data.context.userId;
     });
 };
@@ -12,7 +12,7 @@ function initializeApp(data) {
     document.getElementById('utouidfield').textContent = data.context.utouId;
     document.getElementById('roomidfield').textContent = data.context.roomId;
     document.getElementById('groupidfield').textContent = data.context.groupId;
-
+    console.log(data)
     // openWindow call
     document.getElementById('openwindowbutton').addEventListener('click', function () {
         alert('openwindow');
@@ -29,7 +29,7 @@ function initializeApp(data) {
 
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        console.log('button2');
+        console.log('button111');
         liff.sendMessages([{
             type: 'text',
             text: "You've successfully sent a message! Hooray!"
