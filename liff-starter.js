@@ -1,6 +1,7 @@
 window.onload = function (e) {
     liff.init(function (data) {
-        initializeApp(data);
+        // initializeApp(data);
+        const userId = data.context.userId;
     });
 };
 
@@ -28,28 +29,29 @@ function initializeApp(data) {
 
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        console.log('button111');
+        console.log('button2');
         liff.sendMessages([{
             type: 'text',
             text: "You've successfully sent a message! Hooray!"
-        }, {
-          type: "template",
-          template: {
+          }, 
+          {
+            type: "template",
+            template: {
               type: "confirm",
               text: "Are you sure?",
               actions: [
-                  {
-                    type: "message",
-                    label: "Yes",
-                    text: "yes"
-                  },
-                  {
-                    type: "message",
-                    label: "No",
-                    text: "no"
-                  }
+                {
+                  type: "message",
+                  label: "Yes",
+                  text: "yes"
+                },
+                {
+                  type: "message",
+                  label: "No",
+                  text: "no"
+                }
               ]
-          }
+            }
         }]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
