@@ -28,7 +28,7 @@ function initializeApp(data) {
 
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        console.log('button123');
+        console.log('button456');
         liff.sendMessages([{
             type: 'text',
             text: "You've successfully sent a message! Hooray!"
@@ -38,35 +38,20 @@ function initializeApp(data) {
             stickerId: '144'
         }, {
           "type": "template",
-          "altText": "This is a buttons template",
+          "altText": "this is a confirm template",
           "template": {
-              "type": "buttons",
-              "thumbnailImageUrl": "https://img.goipadwallpapers.com/2016/07/21/e8e462ab791ac099_1024x1024.jpg",
-              "imageAspectRatio": "rectangle",
-              "imageSize": "cover",
-              "imageBackgroundColor": "#FFFFFF",
-              "title": "Menu",
-              "text": "Please select",
-              "defaultAction": {
-                  "type": "uri",
-                  "label": "View detail",
-                  "uri": "https://www.google.com/"
-              },
+              "type": "confirm",
+              "text": "Are you sure?",
               "actions": [
                   {
-                    "type": "postback",
-                    "label": "Buy",
-                    "displayText": "BuyText"
+                    "type": "message",
+                    "label": "Yes",
+                    "text": "yes"
                   },
                   {
-                    "type": "postback",
-                    "label": "Add to cart",
-                    "displayText": "Add to cart Text"
-                  },
-                  {
-                    "type": "uri",
-                    "label": "View detail",
-                    "uri": "https://tw.yahoo.com/"
+                    "type": "message",
+                    "label": "No",
+                    "text": "no"
                   }
               ]
           }
