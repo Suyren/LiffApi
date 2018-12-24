@@ -37,10 +37,40 @@ function initializeApp(data) {
             packageId: '2',
             stickerId: '144'
         }, {
-          "type": "image",
-          "originalContentUrl": "https://img.goipadwallpapers.com/2016/07/21/e8e462ab791ac099_1024x1024.jpg",
-          "previewImageUrl": "https://makerpro.cc/wp-content/uploads/2018/12/%E5%B0%81%E9%9D%A2-240x240.jpg"
-      }]).then(function () {
+          "type": "template",
+          "altText": "This is a buttons template",
+          "template": {
+              "type": "buttons",
+              "thumbnailImageUrl": "https://img.goipadwallpapers.com/2016/07/21/e8e462ab791ac099_1024x1024.jpg",
+              "imageAspectRatio": "rectangle",
+              "imageSize": "cover",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Menu",
+              "text": "Please select",
+              "defaultAction": {
+                  "type": "uri",
+                  "label": "View detail",
+                  "uri": "http://example.com/page/123"
+              },
+              "actions": [
+                  {
+                    "type": "postback",
+                    "label": "Buy",
+                    "data": "action=buy&itemid=123"
+                  },
+                  {
+                    "type": "postback",
+                    "label": "Add to cart",
+                    "data": "action=add&itemid=123"
+                  },
+                  {
+                    "type": "uri",
+                    "label": "View detail",
+                    "uri": "http://example.com/page/123"
+                  }
+              ]
+          }
+        }]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
