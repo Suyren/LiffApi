@@ -33,7 +33,15 @@ function initializeApp(data) {
         liff.sendMessages([{
             type: 'text',
             text: "You've successfully sent a message! Hooray!"
-          }, ]).then(function () {
+          }, {
+            "type": "video",
+            "originalContentUrl": "https://example.com/original.mp4",
+            "previewImageUrl": "https://example.com/preview.jpg"
+          }, {
+            "type": "audio",
+            "originalContentUrl": "https://example.com/original.m4a",
+            "duration": 60000
+          }]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
