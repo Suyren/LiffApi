@@ -33,7 +33,15 @@ function initializeApp(data) {
         liff.sendMessages([{
             type: 'text',
             text: "You've successfully sent a message! Hooray!"
-          }, 
+          }, ]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+    document.getElementById('sendmessagebuttonT').addEventListener('click', function () {
+      console.log('test')
+        liff.sendMessages([
           {
             type: "template",
             template: {
@@ -52,13 +60,13 @@ function initializeApp(data) {
                 }
               ]
             }
-        }]).then(function () {
+          }
+        ]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
     });
-
     //get profile call
     document.getElementById('getprofilebutton').addEventListener('click', function () {
         liff.getProfile().then(function (profile) {
