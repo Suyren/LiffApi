@@ -57,14 +57,14 @@ function initializeApp(data) {
               text: "Are you sure?",
               actions: [
                 {
-                  type: "message",
-                  label: "Yes",
-                  text: "yes"
+                  type: "uri",
+                  label: "Google",
+                  text: "https://www.google.com/"
                 },
                 {
-                  type: "message",
-                  label: "No",
-                  text: "no"
+                  type: "uri",
+                  label: "Youtube",
+                  text: "https://www.youtube.com/"
                 }
               ]
             }
