@@ -33,15 +33,41 @@ function initializeApp(data) {
         liff.sendMessages([{
             type: 'text',
             text: "You've successfully sent a message! Hooray!"
-          }, {
-            "type": "video",
-            "originalContentUrl": "https://example.com/original.mp4",
-            "previewImageUrl": "https://example.com/preview.jpg"
-          }, {
-            "type": "audio",
-            "originalContentUrl": "https://example.com/original.m4a",
-            "duration": 60000
-          }]).then(function () {
+          },
+          {
+            "type": "template",
+            "altText": "this is a image carousel template",
+            "template": {
+                "type": "image_carousel",
+                "columns": [
+                    {
+                      "imageUrl": "https://public.nrao.edu/wp-content/uploads/2017/05/nrao17df04-a-1024x1024.jpg",
+                      "action": {
+                        "type": "uri",
+                        "label": "View detail",
+                        "uri": "http://example.com/page/222"
+                      }
+                    },
+                    {
+                      "imageUrl": "https://cdn.dribbble.com/users/15084/screenshots/702565/attachments/64916/Space_Ghost-iPad---1024x1024.jpg",
+                      "action": {
+                        "type": "uri",
+                        "label": "Google",
+                        "uri": "https://www.google.com/"
+                      }
+                    },
+                    {
+                      "imageUrl": "https://www.office.xerox.com/business-resources/1024x1024_wallpaper_tropical3.jpg",
+                      "action": {
+                        "type": "uri",
+                        "label": "Line",
+                        "uri": "https://line.me/zh-hant/"
+                      }
+                    }
+                ]
+            }
+          }
+        ]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
@@ -50,25 +76,73 @@ function initializeApp(data) {
     document.getElementById('sendmessagebuttonT').addEventListener('click', function () {
       console.log('test')
         liff.sendMessages([
-          // {
-          //   type: "template",
-          //   template: {
-          //     type: "confirm",
-          //     text: "Are you sure?",
-          //     actions: [
-          //       {
-          //         type: "uri",
-          //         label: "Google",
-          //         uri: "https://www.google.com/"
-          //       },
-          //       {
-          //         type: "uri",
-          //         label: "Youtube",
-          //         uri: "https://www.youtube.com/"
-          //       }
-          //     ]
-          //   }
-          // },
+          {
+            "type": "template",
+            "altText": "this is a carousel template",
+            "template": {
+                "type": "carousel",
+                "columns": [
+                    {
+                      "thumbnailImageUrl": "https://res.cloudinary.com/yww/image/upload/v1532274952/TAB/america-from-satellite-1024x1024.jpg",
+                      "imageBackgroundColor": "#FFFFFF",
+                      "title": "this is menu1",
+                      "text": "description",
+                      "defaultAction": {
+                          type: "uri",
+                          label: "Yahoo",
+                          uri: "https://tw.yahoo.com/"
+                      },
+                      "actions": [
+                          {
+                              type: "uri",
+                              label: "Line",
+                              uri: "https://line.me/zh-hant/"
+                          },
+                          {
+                              type: "uri",
+                              label: "Twitch",
+                              uri: "https://www.twitch.tv/"
+                          },
+                          {
+                              type: "uri",
+                              label: "Google",
+                              uri: "https://www.google.com/"
+                          }
+                      ]
+                    },
+                    {
+                      "thumbnailImageUrl": "https://www.office.xerox.com/business-resources/1024x1024_wallpaper_tropical5.jpg",
+                      "imageBackgroundColor": "#000000",
+                      "title": "this is menu2",
+                      "text": "description",
+                      "defaultAction": {
+                          type: "uri",
+                          label: "Google",
+                          uri: "https://www.google.com/"
+                      },
+                      "actions": [
+                          {
+                              type: "uri",
+                              label: "Yahoo",
+                              uri: "https://tw.yahoo.com/"
+                          },
+                          {
+                              type: "uri",
+                              label: "Twitch",
+                              uri: "https://www.twitch.tv/"
+                          },
+                          {
+                              type: "uri",
+                              label: "Line",
+                              uri: "https://line.me/zh-hant/"
+                          }
+                      ]
+                    }
+                ],
+                "imageAspectRatio": "rectangle",
+                "imageSize": "cover"
+            }
+          },
           {
             type: "template",
             altText: "This is a buttons template",
