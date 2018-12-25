@@ -104,10 +104,10 @@ function initializeApp(data) {
                               uri: "https://www.twitch.tv/"
                           },
                           {
-                              type: "uri",
-                              label: "Google",
-                              uri: "https://www.google.com/"
-                          }
+                              type: "postback",
+                              label: "Buy",
+                              data: "action=buy&itemid=222"
+                        },
                       ]
                     },
                     {
