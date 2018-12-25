@@ -50,56 +50,56 @@ function initializeApp(data) {
     document.getElementById('sendmessagebuttonT').addEventListener('click', function () {
       console.log('test')
         liff.sendMessages([
+          // {
+          //   type: "template",
+          //   template: {
+          //     type: "confirm",
+          //     text: "Are you sure?",
+          //     actions: [
+          //       {
+          //         type: "uri",
+          //         label: "Google",
+          //         uri: "https://www.google.com/"
+          //       },
+          //       {
+          //         type: "uri",
+          //         label: "Youtube",
+          //         uri: "https://www.youtube.com/"
+          //       }
+          //     ]
+          //   }
+          // },
           {
             type: "template",
+            altText: "This is a buttons template",
             template: {
-              type: "confirm",
-              text: "Are you sure?",
-              actions: [
-                {
-                  type: "uri",
-                  label: "Google",
-                  uri: "https://www.google.com/"
+                type: "buttons",
+                thumbnailImageUrl: "https://img.goipadwallpapers.com/2016/07/21/e8e462ab791ac099_1024x1024.jpg",
+                imageAspectRatio: "rectangle",
+                imageSize: "cover",
+                imageBackgroundColor: "#FFFFFF",
+                title: "Menu",
+                text: "Please select",
+                defaultAction: {
+                    type: "uri",
+                    label: "Google",
+                    uri: "https://www.google.com/"
                 },
-                {
-                  type: "uri",
-                  label: "Youtube",
-                  uri: "https://www.youtube.com/"
-                }
-              ]
-            }
-          },
-          {
-            "type": "template",
-            "altText": "This is a buttons template",
-            "template": {
-                "type": "buttons",
-                "thumbnailImageUrl": "https://img.goipadwallpapers.com/2016/07/21/e8e462ab791ac099_1024x1024.jpg",
-                "imageAspectRatio": "rectangle",
-                "imageSize": "cover",
-                "imageBackgroundColor": "#FFFFFF",
-                "title": "Menu",
-                "text": "Please select",
-                "defaultAction": {
-                    "type": "uri",
-                    "label": "Google",
-                    "uri": "https://www.google.com/"
-                },
-                "actions": [
+                actions: [
                     {
-                      "type": "uri",
-                      "label": "Yahoo",
-                      "uri": "https://tw.yahoo.com/"
+                      type: "uri",
+                      label: "Yahoo",
+                      uri: "https://tw.yahoo.com/"
                     },
                     {
-                      "type": "uri",
-                      "label": "Twitch",
-                      "uri": "https://www.twitch.tv/"
+                      type: "uri",
+                      label: "Twitch",
+                      uri: "https://www.twitch.tv/"
                     },
                     {
-                      "type": "uri",
-                      "label": "Line",
-                      "uri": "https://line.me/zh-hant/"
+                      type: "uri",
+                      label: "Line",
+                      uri: "https://line.me/zh-hant/"
                     }
                 ]
             }
