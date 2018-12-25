@@ -107,21 +107,6 @@ function initializeApp(data) {
                               type: "uri",
                               label: "Google",
                               uri: "https://www.google.com/"
-                          },
-                          {
-                              type: "uri",
-                              label: "Google",
-                              uri: "https://www.google.com/"
-                          },
-                          {
-                              type: "uri",
-                              label: "Google",
-                              uri: "https://www.google.com/"
-                          },
-                          {
-                              type: "uri",
-                              label: "Google",
-                              uri: "https://www.google.com/"
                           }
                       ]
                     },
