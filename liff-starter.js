@@ -59,14 +59,49 @@ function initializeApp(data) {
                 {
                   type: "uri",
                   label: "Google",
-                  text: "https://www.google.com/"
+                  uri: "https://www.google.com/"
                 },
                 {
                   type: "uri",
                   label: "Youtube",
-                  text: "https://www.youtube.com/"
+                  uri: "https://www.youtube.com/"
                 }
               ]
+            }
+          },
+          {
+            "type": "template",
+            "altText": "This is a buttons template",
+            "template": {
+                "type": "buttons",
+                "thumbnailImageUrl": "https://img.goipadwallpapers.com/2016/07/21/e8e462ab791ac099_1024x1024.jpg",
+                "imageAspectRatio": "rectangle",
+                "imageSize": "cover",
+                "imageBackgroundColor": "#FFFFFF",
+                "title": "Menu",
+                "text": "Please select",
+                "defaultAction": {
+                    "type": "uri",
+                    "label": "Google",
+                    "uri": "https://www.google.com/"
+                },
+                "actions": [
+                    {
+                      "type": "uri",
+                      "label": "Yahoo",
+                      "uri": "https://tw.yahoo.com/"
+                    },
+                    {
+                      "type": "uri",
+                      "label": "Twitch",
+                      "uri": "https://www.twitch.tv/"
+                    },
+                    {
+                      "type": "uri",
+                      "label": "Line",
+                      "uri": "https://line.me/zh-hant/"
+                    }
+                ]
             }
           }
         ]).then(function () {
